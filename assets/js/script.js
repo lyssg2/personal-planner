@@ -13,37 +13,9 @@
       localStorage.setItem(time, value);
   });
 
-  function hourUpdater() {
-      // Retrieves current hours from above
-      var currentHour = moment().hours();
-
-      // loop over time blocks
-      $('.time-block').each(function() {
-          var blockHour = parseInt($(this).attr('id').split('-')[1]);
-
-          // Checks time
-          // If time is past current hour, displays past class (opacity&color)
-          if (blockHour < currentHour) {
-              $(this).addClass('past');
-              // If time is current hour, displays current class (color), removes past
-          } else if (blockHour === currentHour) {
-              $(this).removeClass('past');
-              $(this).addClass('present');
-              // If it is future hours, removes past and present and displays future (color)
-          } else {
-              $(this).removeClass('past');
-              $(this).removeClass('present');
-              $(this).addClass('future');
-          }
-      });
-  }
-
-  // set up interval to check if current time needs to be updated every 10 seconds
-  var interval = setInterval(hourUpdater, 1000);
-
-  hourUpdater();
-
   // grabs saved data from localStorage
+  $('#hour-7 .description').val(localStorage.getItem('hour-7'));
+  $('#hour-8 .description').val(localStorage.getItem('hour-8'));
   $('#hour-9 .description').val(localStorage.getItem('hour-9'));
   $('#hour-10 .description').val(localStorage.getItem('hour-10'));
   $('#hour-11 .description').val(localStorage.getItem('hour-11'));
@@ -53,13 +25,16 @@
   $('#hour-15 .description').val(localStorage.getItem('hour-15'));
   $('#hour-16 .description').val(localStorage.getItem('hour-16'));
   $('#hour-17 .description').val(localStorage.getItem('hour-17'));
+  $('#hour-18 .description').val(localStorage.getItem('hour-18'));
+  $('#hour-19 .description').val(localStorage.getItem('hour-19'));
+  $('#hour-20 .description').val(localStorage.getItem('hour-20'));
+  $('#hour-21 .description').val(localStorage.getItem('hour-21'));
+  $('#hour-22 .description').val(localStorage.getItem('hour-22'));
 });
 
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.sidenav');
     var instances = M.Sidenav.init(elems);
-    instances.open();
-    instances.close();
   });
 
 M.AutoInit();

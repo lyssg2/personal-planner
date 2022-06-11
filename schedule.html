@@ -25,7 +25,7 @@
 
 
     <div class="row">
-        <div class="col s12 m4 l3">
+        <div class="col s0 m3">
             <ul id="slide-out" class="sidenav sidenav-fixed">
                 <li class="side-nav"><a href="schedule.html">Schedule</a></li>
                 <li><a href="todo.html">To Do</a></li>
@@ -36,9 +36,10 @@
 
         </div>
 
-        <div class="col s12 m8 l9">
-            <h3>Schedule</h3>
-            <table>
+        <div class="col s12 m9 13">
+            <h3>Daily Schedule</h3>
+            <h6 id="currentDay" class="lead"></h6>
+            <table class="highlight">
                 <thead>
                     <tr>
                         <th>Time</th>
@@ -49,7 +50,7 @@
 
                 <tbody>
                     <tr>
-                        <td>7:00 AM</td>
+                        <td id="hour-7">7:00 AM</td>
                         <td>
                             <div class="input-field col s12">
                                 <input id="task" type="text">
@@ -62,7 +63,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>8:00 AM</td>
+                        <td id="hour-8">8:00 AM</td>
                         <td>
                             <div class="input-field col s12">
                                 <input id="task" type="text">
@@ -75,7 +76,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>9:00 AM</td>
+                        <td id="hour-8">9:00 AM</td>
                         <td>
                             <div class="input-field col s12">
                                 <input id="task" type="text">
@@ -88,7 +89,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>10:00 AM</td>
+                        <td id="hour-10">10:00 AM</td>
                         <td>
                             <div class="input-field col s12">
                                 <input id="task" type="text">
@@ -101,7 +102,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>11:00 AM</td>
+                        <td id="hour-11">11:00 AM</td>
                         <td>
                             <div class="input-field col s12">
                                 <input id="task" type="text">
@@ -114,7 +115,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>12:00 PM</td>
+                        <td id="hour-12">12:00 PM</td>
                         <td>
                             <div class="input-field col s12">
                                 <input id="task" type="text">
@@ -127,7 +128,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>1:00 PM</td>
+                        <td id="hour-13">1:00 PM</td>
                         <td>
                             <div class="input-field col s12">
                                 <input id="task" type="text">
@@ -140,7 +141,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>2:00 PM</td>
+                        <td id="hour-14">2:00 PM</td>
                         <td>
                             <div class="input-field col s12">
                                 <input id="task" type="text">
@@ -153,7 +154,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>3:00 PM</td>
+                        <td id="hour-15">3:00 PM</td>
                         <td>
                             <div class="input-field col s12">
                                 <input id="task" type="text">
@@ -166,7 +167,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>4:00 PM</td>
+                        <td id="hour-16">4:00 PM</td>
                         <td>
                             <div class="input-field col s12">
                                 <input id="task" type="text">
@@ -179,7 +180,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>5:00 PM</td>
+                        <td id="hour-17">5:00 PM</td>
                         <td>
                             <div class="input-field col s12">
                                 <input id="task" type="text">
@@ -192,7 +193,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>6:00 PM</td>
+                        <td id="hour-18">6:00 PM</td>
                         <td>
                             <div class="input-field col s12">
                                 <input id="task" type="text">
@@ -205,7 +206,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>7:00 PM</td>
+                        <td id="hour-19">7:00 PM</td>
                         <td>
                             <div class="input-field col s12">
                                 <input id="task" type="text">
@@ -218,7 +219,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>8:00 PM</td>
+                        <td id="hour-20">8:00 PM</td>
                         <td>
                             <div class="input-field col s12">
                                 <input id="task" type="text">
@@ -231,7 +232,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>9:00 PM</td>
+                        <td id="hour-21">9:00 PM</td>
                         <td>
                             <div class="input-field col s12">
                                 <input id="task" type="text">
@@ -244,7 +245,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>10:00 PM</td>
+                        <td id="hour-22">10:00 PM</td>
                         <td>
                             <div class="input-field col s12">
                                 <input id="task" type="text">
@@ -263,11 +264,11 @@
 
 
 
-    <script src="assets/js/script.js"></script>
-    <script src=" https://code.jquery.com/jquery-3.6.0.js "
-        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin=" anonymous "></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js "></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
